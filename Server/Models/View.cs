@@ -22,7 +22,7 @@ public class View : Entity<View>
             Layers = Layers.Select(l => new Layer()
             {
                 Name = l.Name,
-                Elements = l.Elements.Select(e => e.Duplicate()).ToList(),
+                Elements = l.Elements.Select(e => e).ToList(),
             }).ToList(),
         };
     }
